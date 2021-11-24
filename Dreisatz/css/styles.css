@@ -9,18 +9,43 @@ body {
     margin-top: 40px;
     border: 2px solid darkorchid;
     display: flex;
+    flex-direction: column;
 }
 
-.card{
-    border: 2px solid darksalmon;
+.titlebox{
+    /*border: 2px solid darksalmon;*/
     padding: 20px;
     margin: 20px;
     flex-grow: 1;
     flex-basis: 0;
+    position: relative;
+}
+
+.titlebox .point{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: rgba(140, 211, 158, 0.671);
+    top: 90px;
+    left: 20px;
 }
 
 .background-image {
     height: 150px;
     background-size: cover;
     background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
+
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .titlebox{
+        flex-basis: 300px;
+    }
+  }
